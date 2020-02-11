@@ -6,13 +6,13 @@
 <img src="{{user.image}}" alt="{{user.name}}">
 <br>
 Iniciaste con Facebook
-{{/if}}
-{{#if user.googleID}}
+
+
+{{ else if user.googleID}}
 <img src="{{user.image}}" alt="{{user.name}}">
 <br>
 Iniciaste con Google
-{{/if}}
-{{#if user.googleID}}
+{{else}}
 <img src="{{user.image}}" alt="{{user.name}}">
 <br>
 Iniciaste sin Redes sociales

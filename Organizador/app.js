@@ -17,7 +17,7 @@ const {
 } = require("./middlewares");
 
 mongoose
-  .connect('mongodb://localhost/proyecto-2', {
+  .connect(process.env.DB, {
     useNewUrlParser: true
   })
   .then(x => {
