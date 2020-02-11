@@ -34,8 +34,6 @@ passport.use(
       const newUser = await User.create({
         facebookID: profile.id,
         name: profile.displayName,
-        email: profile.user.email,
-        image: profile.user.picture
       });
       return done(null, newUser);
     }));

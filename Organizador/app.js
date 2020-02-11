@@ -17,7 +17,7 @@ const {
 } = require("./middlewares");
 
 mongoose
-  .connect('mongodb://localhost/coffee-books', {
+  .connect('mongodb://localhost/proyecto-2', {
     useNewUrlParser: true
   })
   .then(x => {
@@ -78,7 +78,7 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 app.get("facebook")
 
 // default value for title local
-app.locals.title = "Express - Generated with IronGenerator";
+app.locals.title = "djivsdijvdsjkv";
 
 app.get("/profile", isAuthenticated, (req, res) => {
   res.render("profile", {

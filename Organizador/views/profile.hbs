@@ -1,14 +1,19 @@
 <h1>Profile</h1>
 <br>
 <h2>name: {{user.name}}</h2>
-<h2>email: {{user.email}}</h2>
+<h2>email: </h2>
 {{#if user.facebookID}}
 <img src="{{user.image}}" alt="{{user.name}}">
 <br>
-iniciaste con Facebook
+Iniciaste con Facebook
 {{/if}}
 {{#if user.googleID}}
 <img src="{{user.image}}" alt="{{user.name}}">
 <br>
-iniciaste con Google
+Iniciaste con Google
+{{/if}}
+{{#if user.googleID}}
+<img src="{{user.image}}" alt="{{user.name}}">
+<br>
+Iniciaste sin Redes sociales
 {{/if}}

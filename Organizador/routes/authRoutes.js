@@ -26,9 +26,7 @@ router.post(
   })
 );
 // Facebook auth Routes
-router.get("/auth/facebook", passport.authenticate("facebook", {
-  scope: ["user_photos", "email"]
-}));
+router.get("/auth/facebook", passport.authenticate("facebook"));
 
 router.get("/auth/facebook/callback",
   passport.authenticate("facebook", {
