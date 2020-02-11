@@ -1,0 +1,135 @@
+
+h1{
+    text-align: center;
+    padding-top: 2%;
+    color: white;
+    font-size: 220%;
+}
+
+#carouselExampleIndicators{
+    padding-top: 3%;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    
+}
+
+.botonessegundo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+}
+
+.btn{
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+.btnseleccion{
+    margin-top: 7%;
+    height: 130px;
+}
+
+.segundo{
+    padding-top: 5%;
+}
+
+.btnsegundo{
+    margin-top: 15%;
+    height: 200px;
+}
+
+.btndatos{
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil{
+background: rgb(20,104,79); /* Old browsers */
+background: -moz-linear-gradient(top,  rgb(20,104,79) 0%, rgb(125,185,232) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgb(20,104,79) 0%,rgb(125,185,232) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgb(20,104,79) 0%,rgb(125,185,232) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#14684f', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    height: 300px;
+}
+
+.perfiles{
+    background-color: coral;
+    width: 40%;
+    height: 55%;
+    border-radius: 100px;
+}
+
+.textoinfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.action{
+  margin-bottom: 20px;
+}
+
+.instrucción  {
+    background-color: #F98289;
+}
+
+.selección{
+    background-color: #F98289;
+}
+
+.rol{
+    background-color: #F98289;
+}
+
+.registrar{
+    background-color: #F98289;
+}
+
+.login{
+    background-color: #F98289;
+}
+
+.codigo{
+    background-color: #F98289;
+}
+
+.datos{
+    background-color: #F98289;
+}
+
+.rosa{
+    background-color: #F98289;
+}
+
+/**BTN Primary**/
+.btn{
+    border-radius:1px;
+}
+    .btn-primary{
+    background-color: rgb(114, 96, 153);
+    border-color:rgb(114, 96, 153);
+    }
+    
+    .btn-primary:hover{
+    background-color: rgb(94, 79, 126);
+    border-color:rgb(94, 79, 126);
+    }
+    
+    .btn-primary:focus{
+    background-color: rgb(94, 79, 126);
+    border-color:rgb(94, 79, 126);
+    }
+    
+    .btn-primary:active{
+    background-color: rgb(94, 79, 126);
+    border-color:rgb(94, 79, 126);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.075) inset, 0 0 8px rgba(114, 96, 153, 0.6);
+    outline: 0 none;
+    }
+    /**BTN Primary**/
