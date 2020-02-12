@@ -1,0 +1,81 @@
+<body>
+    <h2>Calcular valores de una tabla</h2>
+
+    <table id="miTabla">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Importe</th>
+                <th> Total </th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan=3>Total</td>
+                <td></td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>producto A</td>
+                <td>2</td>
+                <td>12.25</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>producto B</td>
+                <td>1</td>
+                <td>7.10</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>producto C</td>
+                <td>3</td>
+                <td>2.20</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary">
+            Calcular
+        </button>
+    </div>
+
+    <script>
+        // generamos el evento para el boton
+        document.getElementsByTagName("button")[0].addEventListener("click", calcular);
+
+        /**
+         * funcion que realiza los calculos
+         */
+        function calcular() {
+            // obtenemos todas las filas del tbody
+            var filas = document.querySelectorAll("#miTabla tbody tr");
+
+            var total = 0;
+
+            // recorremos cada una de las filas
+            filas.forEach(function (e) {
+
+                // obtenemos las columnas de cada fila
+                var columnas = e.querySelectorAll("td");
+
+                // obtenemos los valores de la cantidad y importe
+                var cantidad = parseFloat(columnas[1].textContent);
+                var importe = parseFloat(columnas[2].textContent);
+
+                // mostramos el total por fila
+                columnas[3].textContent = (cantidad * importe).toFixed(2);
+
+                total += cantidad * importe;
+            });
+
+            // mostramos la suma total
+            var filas = document.querySelectorAll("#miTabla tfoot tr td");
+            filas[1].textContent = total.toFixed(2);
+        }
+    </script>
+</body>

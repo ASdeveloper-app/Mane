@@ -2,14 +2,27 @@ const {
   Router
 } = require("express");
 const {
-  dashboardView,
   datosView,
-  perfilView
+  perfilView,
+  invitadosView,
+  presupuestoView,
+  tareasView,
+  ideasView
+
 } = require("../controllers/adminControllers");
 const router = Router();
 
 
-router.get("/admin/datosevento", datosView);
-router.get("/admin/perfilprincipal", perfilView);
+router.get("/admin/datos", datosView);
+router.get("/admin/perfil", perfilView);
+router.get("/admin/invitados", invitadosView);
+router.get("/admin/presupuesto", presupuestoView);
+router.get("/admin/tareas", tareasView);
+router.get("/admin/ideas", ideasView);
+
+
+
+
+
 
 module.exports = router;
