@@ -9,7 +9,7 @@ exports.signup = async (req, res) => {
 
   if (email === "" || password === "") {
     res.render("auth/signup", {
-      message: "seas mamon dame tu correo y contraseña"
+      message: "Debes ingresar tu correo y contraseña"
     });
   }
 

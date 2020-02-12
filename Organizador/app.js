@@ -78,19 +78,24 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 app.get("facebook")
 
 // default value for title local
-app.locals.title = "djivsdijvdsjkv";
+app.locals.title = "Organizador";
 
 app.get("/profile", isAuthenticated, (req, res) => {
-  res.render("profile", {
+  res.render("admin/perfil", {
+    user: req.user
+  });
+});
+app.get("/perfilprincipal", isAuthenticated, (req, res) => {
+  res.render("perfilprincipal", {
     user: req.user
   });
 });
 
-app.use("/", require("./routes/adminRoutes"))
-
 const index = require("./routes/index");
+
 app.use("/", index);
 app.use("/", require("./routes/authRoutes"));
+app.use("/", require("./routes/adminRoutes"))
 app.use("/", isAuthenticated, require("./routes/privateRoutes"));
 // app.use("/", checkRole("ADMIN"), require("./routes/adminRoutes"));
 
