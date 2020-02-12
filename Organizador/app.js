@@ -95,7 +95,8 @@ const index = require("./routes/index");
 
 app.use("/", index);
 app.use("/", require("./routes/authRoutes"));
-app.use("/", require("./routes/adminRoutes"))
+app.use("/", require("./routes/adminRoutes"));
+app.use("/", require("./routes/guestRoutes"));
 app.use("/", isAuthenticated, require("./routes/privateRoutes"));
 // app.use("/", checkRole("ADMIN"), require("./routes/adminRoutes"));
 
