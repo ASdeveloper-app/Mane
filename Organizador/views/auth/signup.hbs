@@ -15,18 +15,17 @@
 
 
 </head>
-
 <body class="rosa">
   <header>
     <h1 class="segundo">
       Signup
     </h1>
   </header>
-
+<div class="inscripción">
   <form action="/signup" method="POST" id="form-container">
     <div class="form-group">
       <label for="exampleInputName1">Name</label>
-      <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+      <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
@@ -39,24 +38,21 @@
     </div>
     <div class="form-group">
       <label for="exampleInputPasswordAgain1">Password Again</label>
-      <input type="password" class="form-control" id="exampleInputPasswordAgain1">
+      <input type="password" class="form-control" id="exampleInputPasswordAgain1" placeholder="Your password again">
     </div>
     {{#if message}}
     <div class="error-message">{{ message }}</div>
     {{/if}}
-    <button type="submit" class="btn btn-primary">Submit</button>
+         <button type="submit" class="btn btn-primary">Submit</button>
+         <br>
+         <a href="/auth/facebook"><button class="btn btn-info"><i class="fab fa-facebook"></i> Facebook</button></a>
+         <a href="/auth/google"><button class="btn btn-danger"><i class="fab fa-google"></i> Google</button></a>
   </form>
-  <br>
-  <a href="/auth/facebook"><button class="btn btn-info"><i class="fab fa-facebook"></i> Facebook</button></a>
-  <br>
-  <br>
-  <a href="/auth/google"><button class="btn btn-danger"><i class="fab fa-google"></i> Google</button></a>
-  <br>
-  <br>
   <p class="account-message">
     Do you already have an account?
     <a href="/login">Login</a>
   </p>
+</div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

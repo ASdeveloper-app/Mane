@@ -6,7 +6,7 @@ h1 {
   font-size: 220%; }
 
 #carouselExampleIndicators {
-  padding-top: 3%; }
+  padding-top: 8%; }
 
 .botones {
   display: flex;
@@ -64,27 +64,6 @@ h1 {
 .action {
   margin-bottom: 20px; }
 
-.instrucción {
-  background-color: #F98289; }
-
-.selección {
-  background-color: #F98289; }
-
-.rol {
-  background-color: #F98289; }
-
-.registrar {
-  background-color: #F98289; }
-
-.login {
-  background-color: #F98289; }
-
-.codigo {
-  background-color: #F98289; }
-
-.datos {
-  background-color: #F98289; }
-
 .rosa {
   background-color: #F98289; }
 
@@ -110,6 +89,21 @@ h1 {
   box-shadow: 0 1px 1px rgba(255, 255, 255, 0.075) inset, 0 0 8px rgba(114, 96, 153, 0.6);
   outline: 0 none; }
 
-/**BTN Primary**/
+.inscripción {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.inscripción form {
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 5%;
+  font-size: 25px;
+  color: white; }
+
+.inscripción .account-message {
+  color: white;
+  font-size: 22px;
+  padding-top: 10%; }
 
 /*# sourceMappingURL=style.css.map */
