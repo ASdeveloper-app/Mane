@@ -1,7 +1,15 @@
-const { Router } = require("express");
-const { dashboardView } = require("../controllers/adminControllers");
+const {
+  Router
+} = require("express");
+const {
+  dashboardView,
+  datosView,
+  perfilView
+} = require("../controllers/adminControllers");
 const router = Router();
 
-router.get("/dashboard", dashboardView);
+
+router.get("/admin/datosevento", datosView);
+router.get("/admin/perfilprincipal", perfilView);
 
 module.exports = router;

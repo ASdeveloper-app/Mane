@@ -7,7 +7,8 @@ const {
   signupView,
   signup,
   loginView,
-  logout
+  logout,
+  rolView
 } = require("../controllers/authControllers.js");
 
 router.get("/signup", signupView);
@@ -16,10 +17,12 @@ router.post("/signup", signup);
 
 router.get("/login", loginView);
 
+router.get("/rol", rolView);
+
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/rol",
     failureRedirect: "/login",
     failureFlash: true,
     failureMessage: "The input data is incorrect"
@@ -30,8 +33,8 @@ router.get("/auth/facebook", passport.authenticate("facebook"));
 
 router.get("/auth/facebook/callback",
   passport.authenticate("facebook", {
-    successRedirect: "/profile",
-    failureRedirect: "/login"
+    successRedirect: "/rol",
+    failureRedirect: "/"
   })
 );
 
@@ -49,8 +52,8 @@ router.get(
 router.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    successRedirect: "/profile",
-    failureRedirect: "/login"
+    successRedirect: "/rol",
+    failureRedirect: "/"
   })
 );
 

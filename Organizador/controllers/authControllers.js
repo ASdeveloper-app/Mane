@@ -21,6 +21,14 @@ exports.signup = async (req, res) => {
   res.redirect("/login");
 };
 
+
+exports.rolView = (req, res) => {
+  res.render("rol", {
+    message: req.flash("error")
+  });
+};
+
+
 exports.loginView = (req, res) => {
   res.render("auth/login", { message: req.flash("error") });
 };

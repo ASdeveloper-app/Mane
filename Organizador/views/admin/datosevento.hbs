@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="MobileOptimized" content="width" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>Datos</title>
+
+
+</head>
+
+<body class="rosa">
+  <header>
+    <h1 class="segundo">
+      Registra datos, tareas, gastos e invitados
+    </h1>
+  </header>
+
+  <form>
+    <div class="form-group">
+      <label for="exampleInputName1">Nombre de evento</label>
+      <input type="Name" class="form-control" id="exampleInputName1">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputName1">Fecha del evento</label>
+      <input type="Date" class="form-control" id="exampleInputName1">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPhone1">Numero de contacto para invitados</label>
+      <input type="number" class="form-control" id="exampleInputPhone1">
+    </div>
+
+    <form class="was-validated">
+      <div class="mb-3">
+        <label for="validationTextarea">¿Que te impulsa?</label>
+        <textarea class="form-control is-invalid" id="validationTextarea"
+          placeholder="Dile a tus invitados que fuerza motiva este evento..." required></textarea>
+        <div class="invalid-feedback">
+          Please enter a message in the textarea.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <select class="custom-select" required>
+          <option value="">Escoge una categoria</option>
+          <option value="1">Invitados</option>
+          <option value="2">Presupuestos</option>
+          <option value="3">Tareas</option>
+        </select>
+        <div class="invalid-feedback">Example invalid custom select feedback</div>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPhone1">Ingresa alguna tarea, invitado o presupuesto</label>
+        <input type="number" class="form-control" id="exampleInputPhone1">
+      </div>
+
+
+    </form>
+
+    <button onclick="location.href='/admin/perfilprincipal'" type="submit" class="btndatos btn-primary">Submit</button>
+    <button type="submit" class="btndatos btn-primary">Save</button>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

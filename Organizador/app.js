@@ -86,10 +86,12 @@ app.get("/profile", isAuthenticated, (req, res) => {
   });
 });
 
+app.use("/", require("./routes/adminRoutes"))
+
 const index = require("./routes/index");
 app.use("/", index);
 app.use("/", require("./routes/authRoutes"));
 app.use("/", isAuthenticated, require("./routes/privateRoutes"));
-app.use("/", checkRole("ADMIN"), require("./routes/adminRoutes"));
+// app.use("/", checkRole("ADMIN"), require("./routes/adminRoutes"));
 
 module.exports = app;
