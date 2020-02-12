@@ -1,32 +1,29 @@
 <body class="rosa">
   <h1 class="segundo"> Login </h1>
+  <div class="inscripción">
   <form action="/login" method="POST" id="form-container">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
         placeholder="email@email.com">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
 
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="password" name="password" placeholder="Your password">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Your password" >
       {{#if message}}
       <div class="bg-danger text-light">{{ message }}</div>
       {{/if}}
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+    <a href="/auth/facebook"><button class="btn btn-info"><i class="fab fa-facebook"></i> Facebook</button></a>
+    <a href="/auth/google"><button class="btn btn-danger"><i class="fab fa-google"></i> Google</button></a>
   </form>
-  <br>
-  <a href="/auth/facebook"><button class="btn btn-info"><i class="fab fa-facebook"></i> Facebook</button></a>
-  <br>
-  <br>
-  <a href="/auth/google"><button class="btn btn-danger"><i class="fab fa-google"></i> Google</button></a>
-  <br>
   <p class="account-message">
     <br>
-    or register
+   Do you dont have an account?
     <a href="/signup">Signup</a>
   </p>
-
+</div>
 </body>

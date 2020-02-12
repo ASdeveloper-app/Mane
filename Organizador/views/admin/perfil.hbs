@@ -1,7 +1,5 @@
 <body class="rosa">
-  <div class="containerperfil">
-
-    <div class="perfil">
+    <div class="inscripción">
       {{#if user.facebookID}}
       <img src="{{user.image}}" alt="{{user.name}}">
       <br>
@@ -14,7 +12,6 @@
       <img src="{{user.image}}" alt="{{user.name}}">
       <br>
       Iniciaste sin Redes sociales
-
       {{/if}}
     </div>
     <br>
@@ -22,28 +19,24 @@
       <h5>Nombre: {{user.name}}</h5>
       <h5>Correo: {{user.email}}</h5>
       <h5>Que te impulsa:</h5>
-      <a href=""><button class="btnperfil btn-secondary btn-lg"> Agregar Organizadores </button></a>
       <h5>Fecha:</h5>
       <h5>Mapa:</h5>
     </div>
-
     <div class="botonesperfil">
-      <a href="/admin/invitados"><button class="btnperfil btn-secondary btn-lg"> Invitados </button></a>
-      <a href="/admin/presupuesto"><button class="btnperfil btn-secondary btn-lg"> Presupuesto </button></a>
       <br>
-      <a href="/admin/tareas"><button class="btnperfil btn-secondary btn-lg"> Tareas </button></a>
-      <a href="/admin/ideas"><button class="btnperfil btn-secondary btn-lg"> Ideas </button></a>
-    </div>
-  </div>
-  <br>
-
-  <div class="container">
-    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Clic aqu&iacute; para
-      m&aacute;s info</button>
+      <button type="button" class="btninfi btn-info btn-lg" data-toggle="collapse" data-target="#demo">¿De que trata el evento?</button>
     <div id="demo" class="collapse">
       <br>
       Explicacion del evento
     </div>
-  </div>
-
+      <br
+      <a href="/admin/invitados"><button class="btnperfil btn-primary btn-lg"> Invitados </button></a>
+      <br
+      <a href="/admin/presupuesto"><button class="btnperfil btn-primary btn-lg"> Presupuesto </button></a>
+      <br
+      <a href="/admin/tareas"><button class="btnperfil btn-primary btn-lg"> Tareas </button></a>
+      <br
+      <a href="/admin/ideas"><button class="btnperfil btn-primary btn-lg"> Ideas </button></a>
+      <br>
+    </div>
 </body>

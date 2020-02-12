@@ -1,7 +1,6 @@
 <body class="rosa">
-
-  <h1 class="segundo"> Registra datos, tareas, gastos e invitados</h1>
-
+  <h1 class="segundo"> Crea tu evento</h1>
+  <div class="inscripción">
   <form>
     <div class="form-group">
       <label for="exampleInputName1">Nombre de evento</label>
@@ -14,7 +13,7 @@
     </div>
 
     <div class="form-group">
-      <label for="exampleInputPhone1">Numero de contacto para invitados</label>
+      <label for="exampleInputPhone1">Numero de cotacto</label>
       <input type="number" class="form-control" id="exampleInputPhone1">
     </div>
 
@@ -29,26 +28,15 @@
       </div>
 
       <div class="form-group">
+        <label for="validationTextarea">Tipo de evento</label>
         <select class="custom-select" required>
-          <option value="">Escoge una categoria</option>
-          <option value="1">Invitados</option>
-          <option value="2">Presupuestos</option>
-          <option value="3">Tareas</option>
+          <option value="1">Boda</option>
+          <option value="2">Viaje</option>
+          <option value="3">Fiesta</option>
         </select>
         <div class="invalid-feedback">Example invalid custom select feedback</div>
       </div>
-
-      <div class="form-group">
-        <label for="exampleInputPhone1">Ingresa alguna tarea, invitado o presupuesto</label>
-        <input type="number" class="form-control" id="exampleInputPhone1">
-      </div>
-
-
+       <a class="btnsegundo btn-primary btn-lg" href="admin/perfil"> Go to your event </a>
     </form>
-    <a href="/admin/perfil"><button class="btndatos btn-primary"> Submit </button></a>
-    <br>
-    <a href="/admin/perfil"><button class="btndatos btn-primary"> Save </button></a>
-    <br>
-  </form>
-
+</div>
 </body>
