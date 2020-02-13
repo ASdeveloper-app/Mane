@@ -5,13 +5,14 @@ const {
 
 
 const userSchema = new Schema({
-    userID: { 
+    userID: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
     name: String,
     date: String,
     contact: String,
+    lugar: String,
     description: String,
     eveType: {
         type: String,

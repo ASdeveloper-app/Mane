@@ -5,7 +5,11 @@ exports.signupView = (req, res) => {
 };
 
 exports.signup = async (req, res) => {
-  const { name, email, password } = req.body;
+  const {
+    name,
+    email,
+    password
+  } = req.body;
 
   if (email === "" || password === "") {
     res.render("auth/signup", {
@@ -13,11 +17,18 @@ exports.signup = async (req, res) => {
     });
   }
 
-  const userOnDB = await User.findOne({ email });
+  const userOnDB = await User.findOne({
+    email
+  });
   if (userOnDB !== null) {
-    res.render("auth/signup", { message: "El correo ya fue registrado" });
+    res.render("auth/signup", {
+      message: "El correo ya fue registrado"
+    });
   }
-  await User.register({ name, email }, password);
+  await User.register({
+    name,
+    email
+  }, password);
   res.redirect("/login");
 };
 
@@ -30,11 +41,12 @@ exports.rolView = (req, res) => {
 
 
 exports.loginView = (req, res) => {
-  res.render("auth/login", { message: req.flash("error") });
+  res.render("auth/login", {
+    message: req.flash("error")
+  });
 };
 
 exports.logout = (req, res) => {
   req.logout();
   res.redirect("/login");
 };
-

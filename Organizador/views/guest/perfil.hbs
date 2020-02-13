@@ -1,31 +1,37 @@
-<body class="rosa">
-  <div class="containerperfil">
-    <div class="perfil">
-      {{#if user.facebookID}}
-      <img src="{{user.image}}" alt="{{user.name}}">
-      <br>
-      Iniciaste con Facebook
-      {{ else if user.googleID}}
-      <img src="{{user.image}}" alt="{{user.name}}">
-      <br>
-      Iniciaste con Google
-      {{else}}
-      <img src="{{user.image}}" alt="{{user.name}}">
-      <br>
-      Iniciaste sin Redes sociales
+<div class="containerperfil">
+  <div class="perfil">
+    {{#if user.facebookID}}
+    <img src="{{user.image}}" alt="{{user.name}}">
+    <br>
+    Iniciaste con Facebook
+    {{ else if user.googleID}}
+    <img src="{{user.image}}" alt="{{user.name}}">
+    <br>
+    Iniciaste con Google
+    {{else}}
+    <img src="{{user.image}}" alt="{{user.name}}">
+    <br>
+    Iniciaste sin Redes sociales
 
-      {{/if}}
+    {{/if}}
+  </div>
+  <br>
+  <div class="textoinfo">
+    <h5>Nombre: {{user.name}}</h5>
+    <h5>Nombre de Evento: {{event.name}}</h5>
+    <h5>Fecha: {{event.date}}</h5>
+    <h5>Lugar: {{event.place}}</h5>
+    <h5>Mapa:</h5>
+  </div>
+  <div class="botonesperfil">
+    <br>
+    <button type="button" class="btninfi btn-info btn-lg" data-toggle="collapse" data-target="#demo">¿De que trata el
+      evento?</button>
+    <div id="demo" class="collapse">
+      <br>
+      {{event.description}}
+      holaaaa
     </div>
     <br>
-    <div class="textoinfo">
-      <h5>Nombre: {{user.name}}</h5>
-      {{!-- <h5>Correo: {{user.email}}</h5> --}}
-      <a href=""><button class="btnperfil btn-secondary btn-lg"> Agregar Organizadores </button></a>
-      <h5>Fecha:</h5>
-      <h5>Mapa:</h5>
-    </div>
-    <div class="botonesperfil">
-      <button type="button" class="btnperfil btn-secondary btn-lg">Large button</button>
-    </div>
+    <br>
   </div>
-</body>

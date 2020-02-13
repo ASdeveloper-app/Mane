@@ -1,3 +1,9 @@
+exports.eventosView = (req, res) => {
+  res.render("admin/eventos", {
+    message: req.flash("error")
+  });
+};
+
 exports.datosView = (req, res) => {
   res.render("admin/datos", {
     message: req.flash("error")
@@ -33,4 +39,3 @@ exports.ideasView = (req, res) => {
     message: req.flash("error")
   });
 };
-

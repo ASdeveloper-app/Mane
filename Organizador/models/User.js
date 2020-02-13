@@ -9,6 +9,11 @@ const userSchema = new Schema({
   name: String,
   facebookID: String,
   googleID: String,
+  events: [{
+    type: Schema.Types.ObjectId,
+    ref: "Event"
+
+  }],
   image: {
     type: String,
     default: 'https://www.endeavorcareers.com/wp-content/uploads/2017/03/default-profile-pic.png'
@@ -17,7 +22,6 @@ const userSchema = new Schema({
     type: String,
     enum: ["ADMIN", "GUEST"],
     default: "GUEST"
-
   }
 }, {
   timestamps: true
