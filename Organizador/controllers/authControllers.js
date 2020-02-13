@@ -1,12 +1,12 @@
 const User = require("../models/User");
+const { confirmAccount } = require('../config/nodemailer')
 
 exports.signupView = (req, res) => {
   res.render("auth/signup");
 };
 
-exports.signup = async (req, res) => {
+exports.signup = async (req, res, next) => {
   const { name, email, password } = req.body;
-
   if (email === "" || password === "") {
     res.render("auth/signup", {
       message: "Debes ingresar tu correo y contraseña"
