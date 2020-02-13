@@ -80,13 +80,8 @@ app.get("facebook")
 // default value for title local
 app.locals.title = "Organizador";
 
-app.get("/profile", isAuthenticated, (req, res) => {
-  res.render("admin/perfil", {
-    user: req.user
-  });
-});
-app.get("/perfilprincipal", isAuthenticated, (req, res) => {
-  res.render("perfilprincipal", {
+app.get("/change", isAuthenticated, (req, res) => {
+  res.render("change", {
     user: req.user
   });
 });
@@ -95,9 +90,8 @@ const index = require("./routes/index");
 
 app.use("/", index);
 app.use("/", require("./routes/authRoutes"));
-app.use("/", require("./routes/adminRoutes"));
-app.use("/", require("./routes/guestRoutes"));
+app.use("/", isAuthenticated, require("./routes/guestRoutes"));
 app.use("/", isAuthenticated, require("./routes/privateRoutes"));
-// app.use("/", checkRole("ADMIN"), require("./routes/adminRoutes"));
+app.use("/", checkRole("ADMIN"), require("./routes/adminRoutes"));
 
 module.exports = app;
