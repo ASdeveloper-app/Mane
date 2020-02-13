@@ -7,10 +7,10 @@ const {
 const guestSchema = new Schema({
     name: String,
     lastName: String,
-    phone: Number,
+    email: String,
     status: {
         type: String,
-        enum: ["true", "false"]
+        enum: ["true", "false"],
         default: false
     }
 }, {

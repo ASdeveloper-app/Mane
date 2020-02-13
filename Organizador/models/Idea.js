@@ -5,12 +5,13 @@ const {
 
 
 const taskSchema = new Schema({
+    name: String,
     description: String,
-    status: {
+    url:
+    eveType: {
         type: String,
-        enum: ["true", "false"]
-        default: false
-    }
+        enum: ["Viajes", "Fiestas", "Bodas"]
+    },
 }, {
     timestamps: true
 });

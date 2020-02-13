@@ -5,10 +5,8 @@ const {
 
 
 const budgetSchema = new Schema({
-    product: String,
-    quantity: Number,
-    price: Number
-    total: Number
+ item: {},
+ total: Number,
 }, {
     timestamps: true
 });

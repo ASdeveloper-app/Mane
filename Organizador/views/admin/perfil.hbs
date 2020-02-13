@@ -18,7 +18,7 @@
   <div class="textoinfo">
     <h5>Nombre: {{user.name}}</h5>
     <h5>Correo: {{user.email}}</h5>
-    <h5>Que te impulsa:</h5>
+    {{!-- <h5>¿De que trata?: {{user.description}}</h5> --}}
     <h5>Fecha:</h5>
     <h5>Mapa:</h5>
   </div>
@@ -28,7 +28,7 @@
       evento?</button>
     <div id="demo" class="collapse">
       <br>
-      Explicacion del evento
+      {{user.description}}
     </div>
     <br>
     <a href="/admin/invitados"><button class="btnperfil btn-primary btn-lg"> Invitados </button></a>
