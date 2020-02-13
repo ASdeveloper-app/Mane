@@ -12,7 +12,7 @@ const userSchema = new Schema({
     name: String,
     date: String,
     contact: String,
-    lugar: String,
+    place: String,
     description: String,
     eveType: {
         type: String,

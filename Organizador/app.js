@@ -86,5 +86,6 @@ app.use("/", index);
 app.use("/", require("./routes/authRoutes"));
 app.use("/", isAuthenticated, require("./routes/guestRoutes"));
 app.use("/", isAuthenticated, require("./routes/adminRoutes"));
+app.use("/", isAuthenticated, require("./routes/eventRoutes"));
 
 module.exports = app;
