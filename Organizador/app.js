@@ -56,7 +56,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use((req, res, next) => {
-  console.log(req.user);
   next();
 });
 
@@ -78,7 +77,7 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 app.get("facebook")
 
 // default value for title local
-app.locals.title = "Organizador";
+app.locals.title = "Mane";
 
 const index = require("./routes/index");
 

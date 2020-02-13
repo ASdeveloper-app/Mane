@@ -1,45 +1,45 @@
 <h1 class="segundo"> Crea tu evento</h1>
 <div class="inscripción">
-  <form>
+  <form action="/admin/datos" method="POST">
     <div class="form-group">
       <label for="exampleInputName1">Nombre de evento</label>
-      <input type="Name" class="form-control" id="exampleInputName1">
+      <input type="text" name="name" class="form-control" id="exampleInputName1" />
     </div>
 
     <div class="form-group">
       <label for="exampleInputName1">Fecha del evento</label>
-      <input type="Date" class="form-control" id="exampleInputName1">
+      <input type="Date" name="date" class="form-control" id="exampleInputName1" />
     </div>
 
     <div class="form-group">
-      <label for="exampleInputPhone1">Numero de cotacto</label>
-      <input type="number" class="form-control" id="exampleInputPhone1">
+      <label for="exampleInputPhone1">Numero de contacto</label>
+      <input type="number" name="contact" class="form-control" id="exampleInputPhone1" />
     </div>
 
     <div class="form-group">
       <label for="exampleInputPhone1">Lugar</label>
-      <input type="place" class="form-control" id="exampleInputPhone1">
+      <input type="text" name="place" class="form-control" id="exampleInputPhone1" />
     </div>
 
-    <form class="was-validated">
-      <div class="mb-3">
-        <label for="validationTextarea">Descripcion</label>
-        <textarea class="form-control is-invalid" id="validationTextarea"
-          placeholder="Dile a tus invitados que fuerza motiva este evento..." required></textarea>
-      </div>
+    <div class="mb-3">
+      <label for="validationTextarea">Descripcion</label>
+      <textarea class="form-control is-invalid" id="validationTextarea" name="description"
+        placeholder="Dile a tus invitados la razon de este evento..." required></textarea>
+    </div>
 
-      <div class="form-group">
-        <label for="validationTextarea">Tipo de evento</label>
-        <select class="custom-select" required>
-          <option value="1">Boda</option>
-          <option value="2">Viaje</option>
-          <option value="3">Fiesta</option>
-        </select>
-        <div class="invalid-feedback">Example invalid custom select feedback</div>
-      </div>
-      <br>
-    </form>
+    <div class="form-group">
+      <label for="validationTextarea">Tipo de evento</label>
+      <select name="eveType" class="custom-select" required>
+        <option value="Boda">Boda</option>
+        <option value="Viaje">Viaje</option>
+        <option value="Fiesta">Fiesta</option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
 
-    <a class="btnsegundo btn-primary btn-lg" href="/admin/perfil"> Go to your event </a>
+  <a class="btnsegundo btn-primary btn-lg" href="/admin/perfil"> Go to your event </a>
 
 </div>

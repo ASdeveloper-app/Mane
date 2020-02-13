@@ -22,7 +22,6 @@ passport.use(
       callbackURL: "/auth/facebook/callback"
     },
     async (accessToken, refreshToken, profile, done) => {
-      console.log(profile)
       //Usuarios previamente registrados
       const user = await User.findOne({
         facebookID: profile.id
@@ -46,7 +45,6 @@ passport.use(
       callbackURL: "/auth/google/callback"
     },
     async (_, __, profile, done) => {
-      console.log("profile:", profile);
       const user = await User.findOne({
         googleID: profile.id
       });

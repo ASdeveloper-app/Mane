@@ -12,8 +12,8 @@ const {
 const router = Router();
 
 router
-    .get("/create-event", createEventView)
-    .post("/create-event", createEvent)
+    .get("/admin/datos", createEventView)
+    .post("/admin/datos", createEvent)
     .get("/update-event/:eventId", updateEventView)
     .post("/update-event/:eventId", updateEvent)
     .get("/delete-event/:eventId", deleteEvent);

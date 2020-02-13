@@ -3,32 +3,39 @@ const Event = require("../models/Event");
 // Read
 exports.getAllEvent = async (re, res) => {
     const events = await Event.populate(users);
-    res.render("home", { events });
+    res.render("home", {
+        events
+    });
 };
 
 // Create
 exports.createEventView = (req, res) => {
-    res.render("eventos");
+    res.render("admin/datos");
 };
 
 exports.createEvent = async (req, res) => {
     const {
-        userID,
+        _id
+    } = req.user
+    const {
         name,
         date,
         contact,
         place,
-        description
+        description,
+        eveType
     } = req.body;
-    await Event.create({
-        userID,
+    const newEvent = {
+        userID: _id,
         name,
         date,
         contact,
         place,
-        description
-    });
-    res.redirect("/eventos");
+        description,
+        eveType
+    };
+    await Event.create(newEvent)
+    res.redirect("/admin/perfil");
 };
 // Update
 exports.updateEventView = async (req, res) => {
@@ -36,7 +43,7 @@ exports.updateEventView = async (req, res) => {
     res.render("eventos", event);
 };
 
-exports.updateEvent= async (req, res) => {
+exports.updateEvent = async (req, res) => {
     const {
         userID,
         name,
@@ -65,4 +72,3 @@ exports.deleteEvent = async (req, res) => {
     await Event.findByIdAndDelete(req.params.userID);
     res.redirect("/eventos");
 }
-

@@ -15,7 +15,7 @@ const router = Router();
 
 
 router.get("/admin/eventos", eventosView)
-router.get("/admin/datos", datosView);
+// router.get("/admin/datos", datosView);
 router.get("/admin/perfil", perfilView);
 router.get("/admin/invitados", invitadosView);
 router.get("/admin/presupuesto", presupuestoView);
