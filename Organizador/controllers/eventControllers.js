@@ -33,7 +33,8 @@ exports.createEvent = async (req, res) => {
 // Read celebrities get
 exports.getAllEvent = async (req, res) => {
     const events = await Event.find();
-    res.render("admin/eventos", { admin }) 
+    console.log(events)
+    res.render("admin/eventos", { events }) 
     };
 
 
