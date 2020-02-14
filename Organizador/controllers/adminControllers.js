@@ -1,3 +1,6 @@
+const Event = require("../models/Event")
+
+
 exports.eventosView = (req, res) => {
   res.render("admin/perfil", {
     message: req.flash("error")
@@ -10,11 +13,16 @@ exports.datosView = (req, res) => {
   });
 };
 
-exports.perfilView = (req, res) => {
-  // const even = await
+exports.perfilView = async (req, res) => {
+  const {
+    _id
+  } = req.user
+  const events = await Event.find({
+    userID: _id
+  })
   res.render("admin/perfil", {
     user: req.user,
-    event: req.event
+    events
   });
 };
 

@@ -30,14 +30,12 @@
             </tr>
         </thead>
         <tbody>
-            <th> Evento </th>
-            <th> Delete </th>
-            <th> <a href="/admin/eventos/detalle">Edit</a> </th>
             {{#each events}}
-            <h1>{{ this.name}}</h1>
-            <th> <a href="/admin/{{this._id}}">{{ this.name }}</a> </th>
-            <th> <a href="/admin/{{this._id}}/delete">Delete</a> </th>
-            <th> <a href="/admin/eventos/detalle">Edit</a> </th>
+            <tr>
+                <th> {{ this.name }} </th>
+                <th> <a href="/admin/eventos/{{this._id}}/delete">Delete</a> </th>
+                <th> <a href="/admin/eventos/detalle/{{this._id}}">Edit</a> </th>
+            </tr>
             {{/each}}
         </tbody>
     </table>

@@ -20,10 +20,10 @@ router
     // .post("/update-event/:eventId", updateEvent)
     // .get("/delete-event/:eventId", deleteEvent);
 
-    .post("/admin/events/:id", updateEvent)
+    .post("/admin/eventos/detalle/:id", updateEvent)
     .get("/admin/events", getAllEvent)
-    .get("/admin/events/:id/delet", deleteEvent)
-    .get("/admin/events/:id/", updateEventView)
+    .get("/admin/eventos/:id/delete", deleteEvent)
+    .get("/admin/eventos/detalle/:id/", updateEventView)
     .get("/admin/events/:id", eventGet)
 
 module.exports = router;
