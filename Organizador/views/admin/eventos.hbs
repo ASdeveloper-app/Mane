@@ -5,10 +5,16 @@
     <thead>
         <tr>
             <th>Nombre</th>
-            <th>Fecha</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
         </tr>
     </thead>
     <tbody>
+        {{#each event}}
+        <th> <a href="//{{this._id}}">{{ this.name }}</a> </th>
+        <th> <a href="/celebrities/{{this._id}}/delete">Delete</a> </th>
+        <th> <a href="/celebrities/{{this._id}}/edit">Edit</a> </th>
+        {{/each}}
     </tbody>
 </table>
 </div>

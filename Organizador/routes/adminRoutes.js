@@ -13,6 +13,10 @@ const {
 } = require("../controllers/adminControllers");
 const router = Router();
 
+const {
+  getAllEvent
+} = require('../controllers/eventControllers')
+
 
 router.get("/admin/eventos", eventosView)
 // router.get("/admin/datos", datosView);

@@ -1,13 +1,5 @@
 const Event = require("../models/Event");
 
-// Read
-exports.getAllEvent = async (re, res) => {
-    const events = await Event.populate(users);
-    res.render("home", {
-        events
-    });
-};
-
 // Create
 exports.createEventView = (req, res) => {
     res.render("admin/datos");
@@ -37,6 +29,16 @@ exports.createEvent = async (req, res) => {
     await Event.create(newEvent)
     res.redirect("/admin/eventos");
 };
+
+// Read
+exports.getAllEvent = async (re, res) => {
+    const events = await Event.find({userID: _id}).sort({createdAt:-1});
+    res.render("/home", {
+        events
+    });
+};
+
+
 // Update
 exports.updateEventView = async (req, res) => {
     const event = await Event.findById(req.params.eventId);
