@@ -1,0 +1,42 @@
+<body class="rosa">
+  <h1 class="segundo"> Signup </h1>
+  <img src="/images/002-notas.png" alt="" width="50%">
+  <div class="inscripción">
+    <form action="/signup" method="POST" id="form-container">
+      <div class="form-group">
+        <label for="exampleInputName1">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+          placeholder="email@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Your password">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPasswordAgain1">Password Again</label>
+        <input type="password" class="form-control" id="exampleInputPasswordAgain1" placeholder="Your password again">
+      </div>
+
+      {{#if message}}
+      <div class="error-message">{{ message }}</div>
+      {{/if}}
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+    <div class="RRSS">
+    <a href="/auth/facebook"><button class="btn btn-info"><i class="fab fa-facebook"></i> Facebook</button></a>
+    <br>
+    <a href="/auth/google"><button class="btn btn-danger"><i class="fab fa-google"></i> Google</button></a>
+    <p class="account-message">
+      Do you already have an account?
+      <a href="/login">Login</a>
+    </p>
+  </div>
+</body>

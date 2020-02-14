@@ -1,0 +1,44 @@
+<h1>Bienvenido {{user.name}}!</h1>
+<div class="inscripción">
+    {{#if user.facebookID}}
+    <img src="{{user.image}}" alt="{{user.name}}">
+    <br>
+    Iniciaste con Facebook
+    {{ else if user.googleID}}
+    <img src="{{user.image}}" alt="{{user.name}}">
+    <br>
+    Iniciaste con Google
+    {{else}}
+    <img src="{{user.image}}" alt="{{user.name}}">
+    <br>
+    {{/if}}
+</div>
+<br>
+<h7>Nombre: {{user.name}}</h7>
+<h7>Correo: {{user.email}}</h7>
+
+<hr>
+
+<h3>Mis Eventos</h3>
+<div class="Eventos">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each events}}
+            <tr>
+                <th> {{ this.name }} </th>
+                <th> <a href="/admin/eventos/{{this._id}}/delete">Delete</a> </th>
+                <th> <a href="/admin/eventos/detalle/{{this._id}}">Edit</a> </th>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <a href="eventos/datos" class="btn btn-primary">Nuevo Evento</a>
+
+    <br><br><br>
