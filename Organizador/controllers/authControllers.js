@@ -1,5 +1,7 @@
 const User = require("../models/User");
-const { confirmAccount } = require('../config/nodemailer')
+const {
+  confirmAccount
+} = require('../config/nodemailer')
 
 exports.signupView = (req, res) => {
   res.render("auth/signup");
