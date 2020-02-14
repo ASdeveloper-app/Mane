@@ -6,7 +6,7 @@ h1 {
   font-size: 220%; }
 
 #carouselExampleIndicators {
-  padding-top: 8%; }
+  padding-top: 13%; }
 
 .botones {
   display: flex;
@@ -14,11 +14,10 @@ h1 {
   justify-content: space-evenly;
   margin-top: 5%; }
 
-.botonesimagen {
+.botonessegundo {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; 
-}
+  justify-content: space-evenly; }
 
 .btn {
   width: 40%;
@@ -39,29 +38,7 @@ h1 {
   margin-bottom: 20px; }
 
 .rosa {
-  background-color: #F98289; }
-
-/**BTN Primary**/
-.btn {
-  border-radius: 1px; }
-
-.btn-primary {
-  background-color: #726099;
-  border-color: #726099; }
-
-.btn-primary:hover {
-  background-color: #5e4f7e;
-  border-color: #5e4f7e; }
-
-.btn-primary:focus {
-  background-color: #5e4f7e;
-  border-color: #5e4f7e; }
-
-.btn-primary:active {
-  background-color: #5e4f7e;
-  border-color: #5e4f7e;
-  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.075) inset, 0 0 8px rgba(114, 96, 153, 0.6);
-  outline: 0 none; }
+  background-color: #444444; }
 
 .inscripción {
   display: flex;
@@ -109,5 +86,9 @@ h1 {
   display: flex;
   justify-content: center;
   justify-items: center; }
+
+.segundo img {
+  display: flex;
+  justify-content: space-evenly; }
 
 /*# sourceMappingURL=style.css.map */

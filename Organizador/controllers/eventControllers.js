@@ -35,7 +35,7 @@ exports.createEvent = async (req, res) => {
         eveType
     };
     await Event.create(newEvent)
-    res.redirect("/admin/perfil");
+    res.redirect("/admin/eventos");
 };
 // Update
 exports.updateEventView = async (req, res) => {
