@@ -14,11 +14,10 @@ h1 {
   justify-content: space-evenly;
   margin-top: 5%; }
 
-.botonesimagen {
+.botonessegundo {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; 
-}
+  justify-content: space-evenly; }
 
 .btn {
   width: 40%;
