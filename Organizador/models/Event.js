@@ -10,7 +10,9 @@ const userSchema = new Schema({
         ref: 'User'
     },
     name: String,
-    date: String,
+    date: {
+        type: Date
+    },
     contact: String,
     place: String,
     description: String,

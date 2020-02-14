@@ -12,7 +12,8 @@ exports.datosView = (req, res) => {
 
 exports.perfilView = (req, res) => {
   res.render("admin/perfil", {
-    user: req.user
+    user: req.user,
+    event: req.event
   });
 };
 
