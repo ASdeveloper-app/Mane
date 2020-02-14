@@ -14,16 +14,16 @@ const {
 const router = Router();
 
 router
-    .get("/admin/datos", createEventView)
-    .post("/admin/datos", createEvent)
+    .get("/admin/eventos/datos", createEventView)
+    .post("/admin/eventos/datos", createEvent)
     // .get("/update-event/:eventId", updateEventView)
     // .post("/update-event/:eventId", updateEvent)
     // .get("/delete-event/:eventId", deleteEvent);
 
-    .post("/admin/:id", updateEvent)
-    .get("/admin", getAllEvent)
-    .get("/admin/:id/delet", deleteEvent)
-    .get("/admin/:id/perfil", updateEventView)
-    .get("/admin/:id", eventGet)
+    .post("/admin/events/:id", updateEvent)
+    .get("/admin/events", getAllEvent)
+    .get("/admin/events/:id/delet", deleteEvent)
+    .get("/admin/events/:id/", updateEventView)
+    .get("/admin/events/:id", eventGet)
 
 module.exports = router;

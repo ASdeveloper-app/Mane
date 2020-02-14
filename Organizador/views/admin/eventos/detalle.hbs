@@ -1,0 +1,26 @@
+<h1>Evento: {{event.name}}</h1>
+<hr>
+<h5>Fecha: {{event.date}}</h5>
+<h5>Lugar: {{event.place}}</h5>
+<h5>Mapa:</h5>
+</div>
+<div class="botonesperfil">
+  <br>
+  <button type="button" class="btninfi btn-info btn-lg" data-toggle="collapse" data-target="#demo">¿De que trata el
+    evento?</button>
+  <div id="demo" class="collapse">
+    <br>
+    Aqui debe ir la descripcion del evento, SOLO ES UNA PRUEBA.
+    Y FUNCIONA 😎😎
+    {{event.description}}
+  </div>
+  <br>
+  <a href="/admin/invitados"><button class="btnperfil btn-primary btn-lg"> Invitados </button></a>
+  <br>
+  <a href="/admin/presupuesto"><button class="btnperfil btn-primary btn-lg"> Presupuesto </button></a>
+  <br>
+  <a href="/admin/tareas"><button class="btnperfil btn-primary btn-lg"> Tareas </button></a>
+  <br>
+  <a href="/admin/ideas"><button class="btnperfil btn-primary btn-lg"> Ideas </button></a>
+  <br>
+</div>

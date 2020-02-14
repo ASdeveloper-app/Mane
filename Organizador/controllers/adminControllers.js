@@ -1,11 +1,11 @@
 exports.eventosView = (req, res) => {
-  res.render("admin/eventos", {
+  res.render("admin/perfil", {
     message: req.flash("error")
   });
 };
 
 exports.datosView = (req, res) => {
-  res.render("admin/datos", {
+  res.render("admin/eventos/datos", {
     message: req.flash("error")
   });
 };

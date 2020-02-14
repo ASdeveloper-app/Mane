@@ -1,26 +1,46 @@
-<h1>Evento: {{event.name}}</h1>
-<hr>
-<h5>Fecha: {{event.date}}</h5>
-<h5>Lugar: {{event.place}}</h5>
-<h5>Mapa:</h5>
-</div>
-<div class="botonesperfil">
-  <br>
-  <button type="button" class="btninfi btn-info btn-lg" data-toggle="collapse" data-target="#demo">¿De que trata el
-    evento?</button>
-  <div id="demo" class="collapse">
+<h1>Bienvenido {{user.name}}!</h1>
+<div class="inscripción">
+    {{#if user.facebookID}}
+    <img src="{{user.image}}" alt="{{user.name}}">
     <br>
-    Aqui debe ir la descripcion del evento, SOLO ES UNA PRUEBA.
-    Y FUNCIONA 😎😎
-    {{event.description}}
-  </div>
-  <br>
-  <a href="/admin/invitados"><button class="btnperfil btn-primary btn-lg"> Invitados </button></a>
-  <br>
-  <a href="/admin/presupuesto"><button class="btnperfil btn-primary btn-lg"> Presupuesto </button></a>
-  <br>
-  <a href="/admin/tareas"><button class="btnperfil btn-primary btn-lg"> Tareas </button></a>
-  <br>
-  <a href="/admin/ideas"><button class="btnperfil btn-primary btn-lg"> Ideas </button></a>
-  <br>
+    Iniciaste con Facebook
+    {{ else if user.googleID}}
+    <img src="{{user.image}}" alt="{{user.name}}">
+    <br>
+    Iniciaste con Google
+    {{else}}
+    <img src="{{user.image}}" alt="{{user.name}}">
+    <br>
+    {{/if}}
 </div>
+<br>
+<h7>Nombre: {{user.name}}</h7>
+<h7>Correo: {{user.email}}</h7>
+
+<hr>
+
+<h3>Mis Eventos</h3>
+<div class="Eventos">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <th> Evento </th>
+            <th> Delete </th>
+            <th> <a href="/admin/eventos/detalle">Edit</a> </th>
+            {{#each events}}
+            <h1>{{ this.name}}</h1>
+            <th> <a href="/admin/{{this._id}}">{{ this.name }}</a> </th>
+            <th> <a href="/admin/{{this._id}}/delete">Delete</a> </th>
+            <th> <a href="/admin/eventos/detalle">Edit</a> </th>
+            {{/each}}
+        </tbody>
+    </table>
+    <a href="eventos/datos" class="btn btn-primary">Nuevo Evento</a>
+
+    <br><br><br>
