@@ -1,13 +1,16 @@
 const Task = require("../models/Task")
 
 exports.tareaView = async (req, res) => {
+    console.log('entra plis')
     const {
         _id
     } = req.user
-    const tareas = await Task.find({
-        userID: _id
-    })
-    res.render("admin/event/tareas/detalle", {
+
+    const tareas = await Task.find()
+
+    console.log(tareas)
+
+    res.render("admin/eventos/tareas/detalle", {
         user: req.user,
         tareas
     });
@@ -33,11 +36,13 @@ exports.createTarea = async (req, res) => {
         prioridad
     };
     await Task.create(newTarea)
-    res.redirect("/admin/eventos/tareas/detalle");
+    res.redirect("/admin/eventos/tareas/detalles");
 };
 
 exports.getAllTarea = async (req, res) => {
+    
     const tareas = await Task.find();
+    console.log(tareas)
     res.render("/admin/eventos/tareas/detalle", {
         tareas
     })
@@ -76,6 +81,7 @@ exports.deleteTarea = async (req, res) => {
 }
 
 exports.tareaGet = async (req, res) => {
+    console.log('holi consoli')
     const tareita = await Task.findById(req.params.id)
     res.render("/admin/eventos/tareas/detalle", tareita);
 }

@@ -21,9 +21,9 @@ const {
 router.get("/admin/eventos", eventosView)
 // router.get("/admin/datos", datosView);
 router.get("/admin/perfil", perfilView);
-router.get("/admin/eventos/invitados/detalle", invitadosView);
+router.get("/admin/eventos/invitados/detalles", invitadosView);
 router.get("/admin/presupuesto", presupuestoView);
-router.get("/admin/eventos/tareas/tareas", tareasView);
+router.get("/admin/eventos/tareas/detalles", tareasView);
 router.get("/admin/ideas", ideasView);
 
 module.exports = router;

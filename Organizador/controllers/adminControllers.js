@@ -39,7 +39,7 @@ exports.presupuestoView = (req, res) => {
 };
 
 exports.tareasView = (req, res) => {
-  res.render("admin/eventos/tareas/tareas", {
+  res.render("admin/eventos/tareas/detalle", {
     message: req.flash("error")
   });
 };

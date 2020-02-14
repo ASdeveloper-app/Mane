@@ -5,6 +5,10 @@ const {
 
 
 const taskSchema = new Schema({
+    userID: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
     name: String,
     description: String,
     prioridad: {
@@ -16,4 +20,4 @@ const taskSchema = new Schema({
 });
 
 
-module.exports = model("Task", userSchema);
+module.exports = model("Task", taskSchema);

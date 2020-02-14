@@ -76,7 +76,6 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 app.get("facebook")
 
-// default value for title local
 app.locals.title = "Mane";
 
 const index = require("./routes/index");
@@ -86,6 +85,8 @@ app.use("/", require("./routes/authRoutes"));
 app.use("/", isAuthenticated, require("./routes/guestRoutes"));
 app.use("/", isAuthenticated, require("./routes/adminRoutes"));
 app.use("/", isAuthenticated, require("./routes/eventRoutes"));
+app.use("/", isAuthenticated, require("./routes/tareasRoutes"));
+
 
 
 module.exports = app;
