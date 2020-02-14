@@ -7,7 +7,7 @@ h1{
 }
 
 #carouselExampleIndicators{
-    padding-top: 8%;
+    padding-top: 13%;
 }
 
 .botones{
@@ -48,60 +48,34 @@ h1{
 }
 
 .rosa{
-    background-color: #F98289;
+    background-color: #444444;
 }
-
-/**BTN Primary**/
-.btn{
-    border-radius:1px;
-}
-    .btn-primary{
-    background-color: rgb(114, 96, 153);
-    border-color:rgb(114, 96, 153);
-    }
-    
-    .btn-primary:hover{
-    background-color: rgb(94, 79, 126);
-    border-color:rgb(94, 79, 126);
-    }
-    
-    .btn-primary:focus{
-    background-color: rgb(94, 79, 126);
-    border-color:rgb(94, 79, 126);
-    }
-    
-    .btn-primary:active{
-    background-color: rgb(94, 79, 126);
-    border-color:rgb(94, 79, 126);
-    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.075) inset, 0 0 8px rgba(114, 96, 153, 0.6);
-    outline: 0 none;
-    }
   
 
-    .inscripción{
+.inscripción{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
 
-    .inscripción form{
+.inscripción form{
         justify-content: space-around;
         text-align: center;
         padding-top: 5%;
         font-size: 25px;
         color: white;
     }
-
-    .inscripción .account-message{
+.inscripción .account-message{
         color: white;
         font-size: 22px;
         padding-top: 10%;
-    }
+        }
 
-    .textoinfo{
+.textoinfo{
         color: white;
         font-size: 60px;
     }
+
 .botonesperfil{
     display: flex;
     flex-direction: column;
@@ -131,4 +105,9 @@ h1{
     display: flex;
     justify-content: center;
     justify-items: center;
+}
+
+.segundo img{
+    display: flex;
+    justify-content: space-evenly;
 }
