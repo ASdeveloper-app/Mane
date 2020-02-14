@@ -23,30 +23,23 @@ exports.createTarea = async (req, res) => {
     } = req.user
     const {
         name,
-        date,
-        contact,
-        place,
         description,
-        eveType
+        prioridad
     } = req.body;
-    const newEvent = {
+    const newTarea = {
         userID: _id,
         name,
-        date,
-        contact,
-        place,
         description,
-        eveType
+        prioridad
     };
-    await Event.create(newEvent)
-    res.redirect("/admin/perfil");
+    await Task.create(newTarea)
+    res.redirect("/admin/eventos/tareas/detalle");
 };
 
 exports.getAllTarea = async (req, res) => {
-    const events = await Event.find();
-    console.log(events)
-    res.render("admin/perfil", {
-        events
+    const tareas = await Task.find();
+    res.render("/admin/eventos/tareas/detalle", {
+        tareas
     })
 };
 
@@ -55,34 +48,34 @@ exports.updateTareaView = async (req, res) => {
     const {
         _id
     } = req.user
-    const events = await Event.find({
+    const tareas = await Task.find({
         userID: _id
     });
-    const event = await Event.findById(req.params.id);
-    res.render("admin/eventos/detalle", {
-        event,
-        events
+    const tarea = await Task.findById(req.params.id);
+    res.render("/admin/eventos/tareas/datos", {
+        tarea,
+        tareas
     });
 };
 
 exports.updateTarea = async (req, res) => {
-    const editEvent = {
+    const editTarea = {
         userID,
         name,
         description,
         prioridad
     } = req.body;
 
-    await Event.findByIdAndUpdate(req.params.eventId, editEvent)
-    res.redirect("admin/eventos/detalle");
+    await Task.findByIdAndUpdate(req.params.taskId, editTarea)
+    res.redirect("/admin/eventos/tareas/datos");
 };
 
-exports.deleteEvent = async (req, res) => {
-    await Event.findByIdAndDelete(req.params.id);
-    res.redirect("/admin/perfil");
+exports.deleteTarea = async (req, res) => {
+    await Task.findByIdAndDelete(req.params.id);
+    res.redirect("/admin/eventos/tareas/detalle");
 }
 
-exports.eventGet = async (req, res) => {
-    const eventi = await Event.findById(req.params.id)
-    res.render("admin/eventos/detalle", eventi)
+exports.tareaGet = async (req, res) => {
+    const tareita = await Task.findById(req.params.id)
+    res.render("/admin/eventos/tareas/detalle", tareita);
 }
