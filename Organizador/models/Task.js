@@ -5,11 +5,11 @@ const {
 
 
 const taskSchema = new Schema({
+    name: String,
     description: String,
-    status: {
+    eveType: {
         type: String,
-        enum: ["true", "false"]
-        default: false
+        enum: ["Nula", "Media", "Alta"]
     }
 }, {
     timestamps: true

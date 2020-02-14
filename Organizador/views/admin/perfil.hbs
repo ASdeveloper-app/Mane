@@ -1,26 +1,8 @@
-<div class="inscripción">
-  {{#if user.facebookID}}
-  <img src="{{user.image}}" alt="{{user.name}}">
-  <br>
-  Iniciaste con Facebook
-  {{ else if user.googleID}}
-  <img src="{{user.image}}" alt="{{user.name}}">
-  <br>
-  Iniciaste con Google
-  {{else}}
-  <img src="{{user.image}}" alt="{{user.name}}">
-  <br>
-  Iniciaste sin Redes sociales
-  {{/if}}
-</div>
-<br>
-<div class="textoinfo">
-  <h5>Nombre: {{user.name}}</h5>
-  <h5>Correo: {{user.email}}</h5>
-  <h5>Nombre del Evento: {{event.name}}</h5>
-  <h5>Fecha: {{event.date}}</h5>
-  <h5>Lugar: {{event.place}}</h5>
-  <h5>Mapa:</h5>
+<h1>Evento: {{event.name}}</h1>
+<hr>
+<h5>Fecha: {{event.date}}</h5>
+<h5>Lugar: {{event.place}}</h5>
+<h5>Mapa:</h5>
 </div>
 <div class="botonesperfil">
   <br>

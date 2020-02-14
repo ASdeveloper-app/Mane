@@ -1,0 +1,21 @@
+<h1>Eventos</h1>
+<div class="Eventos">
+    <img src="/images/FAVPNG_recruitment-job-human-resource-flat-design_qSw5bzRJ.png" alt="" height="300px"
+        width="370px">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each event}}
+            <th> <a href="//{{this._id}}">{{ this.name }}</a> </th>
+            <th> <a href="/celebrities/{{this._id}}/delete">Delete</a> </th>
+            <th> <a href="/celebrities/{{this._id}}/edit">Edit</a> </th>
+            {{/each}}
+        </tbody>
+    </table>
+    <a href="datos" class="btn btn-primary">Nuevo Evento</a>

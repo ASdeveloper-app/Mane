@@ -1,0 +1,26 @@
+<h1 class="segundo"> Crea Tareas</h1>
+<div class="inscripción">
+    <form action="/admin/datos" method="POST">
+        <div class="form-group">
+            <label for="exampleInputName1"> Tarea </label>
+            <input type="text" name="name" class="form-control" id="exampleInputName1" />
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputName1"> Descripcion </label>
+            <input type="Date" name="date" class="form-control" id="exampleInputName1" />
+        </div>
+
+        <div class="form-group">
+            <label for="validationTextarea">Prioridad</label>
+            <select name="eveType" class="custom-select" required>
+                <option value="Nula">Nula</option>
+                <option value="Media">Media</option>
+                <option value="Alta">Alta</option>
+            </select>
+            <div class="invalid-feedback">Example invalid custom select feedback</div>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
