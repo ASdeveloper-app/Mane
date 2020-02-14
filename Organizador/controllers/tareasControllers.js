@@ -1,10 +1,23 @@
-const Event = require("../models/Event");
+const Task = require("../models/Task")
 
-exports.createEventView = (req, res) => {
+exports.tareaView = async (req, res) => {
+    const {
+        _id
+    } = req.user
+    const tareas = await Task.find({
+        userID: _id
+    })
+    res.render("admin/event/tareas/detalle", {
+        user: req.user,
+        tareas
+    });
+};
+
+exports.createTareaView = (req, res) => {
     res.render("admin/eventos/datos");
 };
 
-exports.createEvent = async (req, res) => {
+exports.createTarea = async (req, res) => {
     const {
         _id
     } = req.user
@@ -29,7 +42,7 @@ exports.createEvent = async (req, res) => {
     res.redirect("/admin/perfil");
 };
 
-exports.getAllEvent = async (req, res) => {
+exports.getAllTarea = async (req, res) => {
     const events = await Event.find();
     console.log(events)
     res.render("admin/perfil", {
@@ -38,7 +51,7 @@ exports.getAllEvent = async (req, res) => {
 };
 
 
-exports.updateEventView = async (req, res) => {
+exports.updateTareaView = async (req, res) => {
     const {
         _id
     } = req.user
@@ -52,14 +65,12 @@ exports.updateEventView = async (req, res) => {
     });
 };
 
-exports.updateEvent = async (req, res) => {
+exports.updateTarea = async (req, res) => {
     const editEvent = {
         userID,
         name,
-        date,
-        contact,
-        place,
-        description
+        description,
+        prioridad
     } = req.body;
 
     await Event.findByIdAndUpdate(req.params.eventId, editEvent)

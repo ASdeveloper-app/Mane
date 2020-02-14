@@ -1,0 +1,43 @@
+<h1 class="segundo">prueba</h1>
+<img src="/images/004-fotografo.png" alt="" width="50%">
+<div class="inscripción">
+  <form action="/admin/eventos/datos" method="POST">
+    <div class="form-group">
+      <label for="exampleInputName1">Nombre de evento</label>
+      <input type="text" name="name" class="form-control" id="exampleInputName1" />
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputName1">Fecha del evento</label>
+      <input type="Date" name="date" class="form-control" id="exampleInputName1" />
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPhone1">Numero de contacto</label>
+      <input type="number" name="contact" class="form-control" id="exampleInputPhone1" />
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPhone1">Lugar</label>
+      <input type="text" name="place" class="form-control" id="exampleInputPhone1" />
+    </div>
+
+    <div class="mb-3">
+      <label for="validationTextarea">Descripcion</label>
+      <textarea class="form-control is-invalid" id="validationTextarea" name="description"
+        placeholder="Dile a tus invitados la razon de este evento..." required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="validationTextarea">Tipo de evento</label>
+      <select name="eveType" class="custom-select" required>
+        <option value="Boda">Boda</option>
+        <option value="Viaje">Viaje</option>
+        <option value="Fiesta">Fiesta</option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</div>

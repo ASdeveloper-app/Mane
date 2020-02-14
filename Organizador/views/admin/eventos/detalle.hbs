@@ -1,0 +1,76 @@
+<h1>Evento: {{event.name}}</h1>
+<hr>
+<h5>Fecha: {{event.date}}</h5>
+<h5>Contacto: {{event.contact}}</h5>
+<h5>Lugar: {{event.place}}</h5>
+<h5>Descripcion: {{event.description}}</h5>
+<h5>Tipo de Evento: {{event.eveType}}</h5>
+
+
+</div>
+<div class="botonesperfil">
+  <br>
+  <button type="button" class="btninfi btn-info btn-lg" data-toggle="collapse" data-target="#demo">Editar
+    Evento</button>
+  <div id="demo" class="collapse">
+    <div class="inscripción">
+      <form action="/admin/eventos/detalle/:id" method="POST">
+        <div class="form-group">
+          <label for="exampleInputName1">Nombre de evento</label>
+          <input type="text" name="name" class="form-control" id="exampleInputName1" />
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputName1">Fecha del evento</label>
+          <input type="Date" name="date" class="form-control" id="exampleInputName1" />
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPhone1">Numero de contacto</label>
+          <input type="number" name="contact" class="form-control" id="exampleInputPhone1" />
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPhone1">Lugar</label>
+          <input type="text" name="place" class="form-control" id="exampleInputPhone1" />
+        </div>
+
+        <div class="mb-3">
+          <label for="validationTextarea">Descripcion</label>
+          <textarea class="form-control is-invalid" id="validationTextarea" name="description" required></textarea>
+        </div>
+        <label for="validationTextarea">Tipo de evento</label>
+        <select name="eveType" class="custom-select" required>
+          <option value="Boda">Boda</option>
+          <option value="Viaje">Viaje</option>
+          <option value="Fiesta">Fiesta</option>
+        </select>
+        <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+    </form>
+
+  </div>
+</div>
+<br>
+<br>
+</div>
+
+<div class="botonesperfil">
+  <br>
+  <button type="button" class="btninfi btn-info btn-lg" data-toggle="collapse" data-target="#demoh">Extras</button>
+  <div id="demoh" class="collapse">
+    <br>
+    <a href="/admin/eventos/invitados/detalle"><button class="btnperfil btn-primary btn-lg"> Invitados </button></a>
+    <br>
+    <br>
+    <a href="/admin/presupuesto"><button class="btnperfil btn-primary btn-lg"> Presupuesto </button></a>
+    <br><br>
+    <a href="/admin/eventos/tareas/tareas"><button class="btnperfil btn-primary btn-lg"> Tareas </button></a>
+    <br><br>
+    <a href="/admin/ideas"><button class="btnperfil btn-primary btn-lg"> Ideas </button></a>
+  </div>
+  <br>
+  <br>
+</div>

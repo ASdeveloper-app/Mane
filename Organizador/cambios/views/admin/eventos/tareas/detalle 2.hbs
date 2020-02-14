@@ -1,0 +1,55 @@
+<h1>Tareas</h1>
+<div class="Eventos">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Prioridad</th>
+                <th>Delete</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each events}}
+            <tr>
+                <th> {{ this.name }} </th>
+                <th> <a href="/admin/eventos/{{this._id}}/delete">Delete</a> </th>
+                <th> <a href="/admin/eventos/detalle/{{this._id}}">Edit</a> </th>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div class="botonesperfil">
+        <br>
+        <button type="button" class="btninfi btn-info btn-lg" data-toggle="collapse"
+            data-target="#demo1">Añadir</button>
+        <div id="demo1" class="collapse">
+            <div class="inscripción">
+                <form action="/admin/eventos/detalle/:id" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Nombre de Tarea</label>
+                        <input type="text" name="name" class="form-control" id="exampleInputName1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputName1">Descripcion</label>
+                        <input type="text" name="description" class="form-control" id="exampleInputName1" />
+                    </div>
+
+                    <label for="validationTextarea">Prioridad</label>
+                    <select name="prioridad" class="custom-select" required>
+                        <option value="Nula">Nula</option>
+                        <option value="Media">Media</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                    <div class="invalid-feedback">Example invalid custom select feedback</div>
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+            </form>
+
+        </div>
+    </div>
+
+    <br><br><br>

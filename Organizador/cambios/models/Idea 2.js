@@ -7,10 +7,10 @@ const {
 const taskSchema = new Schema({
     name: String,
     description: String,
-    prioridad: {
+    url: eveType: {
         type: String,
-        enum: ["Nula", "Media", "Alta"]
-    }
+        enum: ["Viajes", "Fiestas", "Bodas"]
+    },
 }, {
     timestamps: true
 });

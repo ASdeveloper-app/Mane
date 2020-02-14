@@ -1,0 +1,94 @@
+@charset "UTF-8";
+h1 {
+  text-align: center;
+  padding-top: 2%;
+  color: white;
+  font-size: 220%; }
+
+#carouselExampleIndicators {
+  padding-top: 13%; }
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5%; }
+
+.botonessegundo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.btn {
+  width: 40%;
+  justify-content: space-evenly; }
+
+.btnseleccion {
+  margin-top: 7%;
+  height: 130px; }
+
+.segundo {
+  padding-top: 5%; }
+
+.btnsegundo {
+  margin-top: 15%;
+  height: 200px; }
+
+.action {
+  margin-bottom: 20px; }
+
+.rosa {
+  background-color: #444444; }
+
+.inscripción {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.inscripción form {
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 5%;
+  font-size: 25px;
+  color: white; }
+
+.inscripción .account-message {
+  color: white;
+  font-size: 22px;
+  padding-top: 10%; }
+
+.textoinfo {
+  color: white;
+  font-size: 60px; }
+
+.botonesperfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: space-evenly; }
+
+.RRSS {
+  justify-content: space-around;
+  justify-items: center; }
+
+.RRSS a {
+  display: flex;
+  justify-content: center;
+  justify-items: center; }
+
+.RRSS p {
+  display: flex;
+  justify-content: center;
+  justify-items: center; }
+
+.segundo img {
+  display: flex;
+  justify-content: space-evenly; }
+
+/*# sourceMappingURL=style.css.map */
