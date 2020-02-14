@@ -4,15 +4,10 @@ const {
 } = require("mongoose");
 
 
-const guestSchema = new Schema({
+const userSchema = new Schema({
     name: String,
     lastName: String,
-    email: String,
-    status: {
-        type: String,
-        enum: ["true", "false"],
-        default: false
-    }
+    email: String
 }, {
     timestamps: true
 });

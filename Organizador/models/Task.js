@@ -7,7 +7,7 @@ const {
 const taskSchema = new Schema({
     name: String,
     description: String,
-    eveType: {
+    prioridad: {
         type: String,
         enum: ["Nula", "Media", "Alta"]
     }

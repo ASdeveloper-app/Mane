@@ -20,7 +20,7 @@ router
     // .post("/update-event/:eventId", updateEvent)
     // .get("/delete-event/:eventId", deleteEvent);
 
-    .post("/admin/eventos/detalle/:id", updateEvent)
+    .post("/:id", updateEvent)
     .get("/admin/events", getAllEvent)
     .get("/admin/eventos/:id/delete", deleteEvent)
     .get("/admin/eventos/detalle/:id/", updateEventView)

@@ -27,7 +27,7 @@ exports.perfilView = async (req, res) => {
 };
 
 exports.invitadosView = (req, res) => {
-  res.render("admin/invitados", {
+  res.render("admin/eventos/invitados/detalle", {
     message: req.flash("error")
   });
 };
@@ -39,7 +39,7 @@ exports.presupuestoView = (req, res) => {
 };
 
 exports.tareasView = (req, res) => {
-  res.render("admin/tareas", {
+  res.render("admin/eventos/tareas/tareas", {
     message: req.flash("error")
   });
 };
