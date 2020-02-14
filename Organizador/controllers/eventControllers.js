@@ -1,6 +1,6 @@
 const Event = require("../models/Event");
 
-// Create
+// Create celebrity newget
 exports.createEventView = (req, res) => {
     res.render("admin/datos");
 };
@@ -27,26 +27,24 @@ exports.createEvent = async (req, res) => {
         eveType
     };
     await Event.create(newEvent)
-    res.redirect("/admin/eventos");
+    res.redirect("/admin/eventos");//checar ruta de regreso
 };
 
-// Read
-exports.getAllEvent = async (re, res) => {
-    const events = await Event.find({userID: _id}).sort({createdAt:-1});
-    res.render("/home", {
-        events
-    });
-};
+// Read celebrities get
+exports.getAllEvent = async (req, res) => {
+    const events = await Event.find();
+    res.render("admin/eventos", { admin }) 
+    };
 
 
-// Update
+// Update probar.id celebrity editget
 exports.updateEventView = async (req, res) => {
     const event = await Event.findById(req.params.eventId);
-    res.render("eventos", event);
+    res.render("admin/datos", event);
 };
-
+//celebrity editPost
 exports.updateEvent = async (req, res) => {
-    const {
+    const editEvent = {
         userID,
         name,
         date,
@@ -55,22 +53,18 @@ exports.updateEvent = async (req, res) => {
         description
     } = req.body;
 
-    await Event.findByIdAndUpdate(req.params.eventId, {
-        userID,
-        name,
-        date,
-        contact,
-        place,
-        description
-    });
-
-    res.redirect("/eventos");
+    await Event.findByIdAndUpdate(req.params.eventId, editEvent)
+    res.redirect("admin/eventos");
 };
 
 
-// Delete
-
+// Delete celebrity delget
 exports.deleteEvent = async (req, res) => {
     await Event.findByIdAndDelete(req.params.userID);
-    res.redirect("/eventos");
+    res.redirect("/admin/eventos");
+}
+
+exports.eventGet = async (req, res) => {
+    const eventi = await Event.findById(req.params.userID)
+    res.render("admin/perfil", eventi )
 }
